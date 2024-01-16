@@ -7,16 +7,32 @@ class HabitListPage extends StatefulWidget {
   State<HabitListPage> createState() => _HabitListPageState();
 }
 
+class FeedItem {
+  final String name;
+  final String job;
+  final int age;
+  final Color? color;
+
+  FeedItem(
+      {required this.name,
+      required this.job,
+      required this.age,
+      required this.color});
+}
+
 class _HabitListPageState extends State<HabitListPage> {
-  List<String> feedItems = [
-    "Bright",
-    "Kwame",
-    "Oyinlade",
-    "Honeybonny",
-    "Obehi",
-    "Deyemi",
-    "Benard",
-    "Derek"
+  List<FeedItem> feedItems = [
+    FeedItem(name: "Bright", job: "Fellow", age: 32, color: Colors.blue),
+    FeedItem(
+        name: "Obehi",
+        job: "Thorn in my flesh",
+        age: 25,
+        color: const Color.fromARGB(255, 79, 93, 104)),
+    FeedItem(name: "Oyinlade", job: "EIT", age: 23, color: Colors.pink),
+    FeedItem(name: "Presh", job: "Friend", age: 20, color: Colors.blue),
+    FeedItem(name: "Derek", job: "EIT Daddy", age: 23, color: Colors.black),
+    FeedItem(name: "Tumie", job: "Friend", age: 20, color: Colors.purple),
+    FeedItem(name: "Mobby", job: "Friendnemy", age: 50, color: Colors.green),
   ];
 
   @override
@@ -55,18 +71,36 @@ class _HabitListPageState extends State<HabitListPage> {
             ),
             Expanded(
               child: ListView.builder(
-                scrollDirection: Axis.vertical,
+                // scrollDirection: Axis.vertical,
                 itemCount: feedItems.length,
-                itemBuilder: (BuildContext context, int position) {
-                  String name = feedItems[position];
-                  return Container(
-                    margin: const EdgeInsets.only(bottom: 8),
-                    color: Colors.white,
-                    height: 100,
-                    child: ListTile(
-                      title: Text(name),
-                      subtitle: Text(name),
-                      trailing: const Icon(Icons.bolt),
+                itemBuilder: (BuildContext context, int index) {
+                  // String name = feedItems[position];
+                  // FeedItem item = feedItems[position];
+                  FeedItem item = feedItems[index];
+                  return Card(
+                    color: item.color ?? Colors.white,
+                    child: Container(
+                      margin: const EdgeInsets.only(bottom: 8),
+                      // color: (item.color),
+
+                      height: 100,
+                      child: ListTile(
+                        title: Text(
+                          item.name,
+                          style: const TextStyle(
+                              color: Colors.white, fontSize: 24),
+                        ),
+                        subtitle: Text(
+                          item.job,
+                          style: const TextStyle(
+                              color: Colors.white, fontSize: 18),
+                        ),
+                        trailing: const Icon(
+                          Icons.person,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                      ),
                     ),
                   );
                 },
