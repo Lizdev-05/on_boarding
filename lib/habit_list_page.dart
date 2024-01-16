@@ -31,7 +31,18 @@ class _HabitListPageState extends State<HabitListPage> {
           ),
         ),
       ),
-      body: Container(),
+      body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        child: const Column(
+          children: [
+            Text(
+              "Choose what you would like to make your habit",
+              style: TextStyle(color: Colors.white, fontSize: 32),
+              textAlign: TextAlign.center,
+            )
+          ],
+        ),
+      ),
     );
   }
 }
