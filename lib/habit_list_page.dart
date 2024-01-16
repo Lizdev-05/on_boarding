@@ -32,13 +32,33 @@ class _HabitListPageState extends State<HabitListPage> {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16),
-        child: const Column(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.start,
+          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Choose what you would like to make your habit",
               style: TextStyle(color: Colors.white, fontSize: 32),
               textAlign: TextAlign.center,
+            ),
+            Expanded(
+              child: ListView.builder(
+                scrollDirection: Axis.vertical,
+                itemCount: 15,
+                itemBuilder: (BuildContext context, int pos) {
+                  return Container(
+                    margin: const EdgeInsets.only(bottom: 8),
+                    color: Colors.white,
+                    height: 100,
+                    child: const ListTile(
+                      title: Text("Heading"),
+                      subtitle: Text("Here is the subtitle"),
+                      trailing: Icon(Icons.bolt),
+                    ),
+                  );
+                },
+              ),
             )
           ],
         ),
