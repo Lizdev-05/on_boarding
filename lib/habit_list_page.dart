@@ -8,6 +8,17 @@ class HabitListPage extends StatefulWidget {
 }
 
 class _HabitListPageState extends State<HabitListPage> {
+  List<String> feedItems = [
+    "Bright",
+    "Kwame",
+    "Oyinlade",
+    "Honeybonny",
+    "Obehi",
+    "Deyemi",
+    "Benard",
+    "Derek"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,16 +56,17 @@ class _HabitListPageState extends State<HabitListPage> {
             Expanded(
               child: ListView.builder(
                 scrollDirection: Axis.vertical,
-                itemCount: 15,
-                itemBuilder: (BuildContext context, int pos) {
+                itemCount: feedItems.length,
+                itemBuilder: (BuildContext context, int position) {
+                  String name = feedItems[position];
                   return Container(
                     margin: const EdgeInsets.only(bottom: 8),
                     color: Colors.white,
                     height: 100,
-                    child: const ListTile(
-                      title: Text("Heading"),
-                      subtitle: Text("Here is the subtitle"),
-                      trailing: Icon(Icons.bolt),
+                    child: ListTile(
+                      title: Text(name),
+                      subtitle: Text(name),
+                      trailing: const Icon(Icons.bolt),
                     ),
                   );
                 },
