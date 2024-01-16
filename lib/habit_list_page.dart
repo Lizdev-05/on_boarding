@@ -73,10 +73,10 @@ class _HabitListPageState extends State<HabitListPage> {
               child: ListView.builder(
                 // scrollDirection: Axis.vertical,
                 itemCount: feedItems.length,
-                itemBuilder: (BuildContext context, int index) {
+                itemBuilder: (BuildContext context, int position) {
                   // String name = feedItems[position];
-                  // FeedItem item = feedItems[position];
-                  FeedItem item = feedItems[index];
+
+                  FeedItem item = feedItems[position];
                   return Card(
                     color: item.color ?? Colors.white,
                     child: Container(
