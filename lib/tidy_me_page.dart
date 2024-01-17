@@ -90,7 +90,7 @@ class _TestState extends State<TidyMePage> {
                           ],
                         ),
                         Row(
-                          mainAxisSize: MainAxisSize.min, // Correction here
+                          mainAxisSize: MainAxisSize.min,
                           children: [
                             const Text(
                               "Use cleaning service \n on a regular basis",
@@ -99,8 +99,7 @@ class _TestState extends State<TidyMePage> {
                             ),
                             const SizedBox(width: 20),
                             Flexible(
-                              // Correction here
-                              fit: FlexFit.loose, // Correction here
+                              fit: FlexFit.loose,
                               child: OutlinedButton.icon(
                                 onPressed: () {},
                                 style: OutlinedButton.styleFrom(
