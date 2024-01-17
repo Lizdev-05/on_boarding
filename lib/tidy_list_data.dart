@@ -16,26 +16,26 @@ class FeedItem {
 class TidyListData extends StatelessWidget {
   TidyListData({super.key});
 
-  List<FeedItem> feedItems = [
+  final List<FeedItem> feedItems = [
     FeedItem(
         title: "Window Cleaning",
         description:
             "Clean window and window \n frame of various types using \n high quality leaning agents",
         // ignore: unnecessary_string_escapes
         subtitle: "From 100",
-        color: Color.fromARGB(255, 168, 212, 230)),
+        color: const Color.fromARGB(255, 168, 212, 230)),
     FeedItem(
         title: "Carpet Dry Cleaning",
         description:
             "Professionally clean carpet\n using a dry cleaning method \n to remove dirt and stains",
         subtitle: "From 500",
-        color: Color.fromARGB(255, 233, 199, 177)),
+        color: const Color.fromARGB(255, 233, 199, 177)),
     FeedItem(
         title: "Furniture Dry Cleaning",
         description:
             "Professionally clean furniture \n using a dry cleaning method \n to remove dirt and stains",
         subtitle: "From 150",
-        color: Color.fromARGB(255, 213, 197, 255)),
+        color: const Color.fromARGB(255, 213, 197, 255)),
     FeedItem(
         title: "Window Cleaning",
         description:
@@ -48,20 +48,20 @@ class TidyListData extends StatelessWidget {
         description:
             "Professionally clean carpet \n using a dry cleaning method \n to remove dirt and stains",
         subtitle: "From 500",
-        color: Color.fromARGB(255, 213, 197, 255)),
+        color: const Color.fromARGB(255, 213, 197, 255)),
     FeedItem(
         title: "Window Cleaning",
         description:
             "Clean window and window \n frame of various types using \n high quality leaning agents",
         // ignore: unnecessary_string_escapes
         subtitle: "From 100",
-        color: Color.fromARGB(255, 233, 199, 177)),
+        color: const Color.fromARGB(255, 233, 199, 177)),
     FeedItem(
         title: "Furniture Dry Cleaning",
         description:
             "Professionally clean furniture \n using a dry cleaning method \n to remove dirt and stains",
         subtitle: "From 150",
-        color: Color.fromARGB(255, 168, 212, 230)),
+        color: const Color.fromARGB(255, 168, 212, 230)),
   ];
 
   @override
@@ -71,11 +71,11 @@ class TidyListData extends StatelessWidget {
       itemBuilder: (context, index) {
         FeedItem item = feedItems[index];
         return Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Card(
             color: item.color ?? Colors.white,
             child: Padding(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               child: Column(
                 children: [
                   Row(
@@ -87,7 +87,7 @@ class TidyListData extends StatelessWidget {
                             fontSize: 20,
                             fontWeight: FontWeight.w600),
                       ),
-                      SizedBox(width: 70),
+                      const SizedBox(width: 70),
                       Text(
                         item.subtitle,
                         style: const TextStyle(
