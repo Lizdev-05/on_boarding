@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:on_bord/test.dart';
+// import 'package:on_bord/test.dart';
 import 'package:on_bord/tidy_me_page.dart';
+// import 'package:on_bord/tidy_me_page.dart';
 
 class TidyMeApp extends StatelessWidget {
   const TidyMeApp({super.key});
@@ -10,7 +11,7 @@ class TidyMeApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Test(),
+        body: TidyMePage(),
       ),
     );
   }

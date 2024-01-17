@@ -60,9 +60,8 @@ class _HabitListPageState extends State<HabitListPage> {
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16),
+        // child: SingleChildScrollView(
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.start,
-          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
               "Choose what you would like to make your habit",
@@ -71,8 +70,9 @@ class _HabitListPageState extends State<HabitListPage> {
             ),
             Expanded(
               child: ListView.builder(
-                // scrollDirection: Axis.vertical,
                 itemCount: feedItems.length,
+                // physics: const NeverScrollableScrollPhysics(),
+                // shrinkWrap: true,
                 itemBuilder: (BuildContext context, int position) {
                   // String name = feedItems[position];
 
@@ -110,5 +110,6 @@ class _HabitListPageState extends State<HabitListPage> {
         ),
       ),
     );
+    // );
   }
 }
