@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:on_bord/test.dart';
 import 'package:on_bord/tidy_me_page.dart';
 
 class TidyMeApp extends StatelessWidget {
@@ -9,7 +10,7 @@ class TidyMeApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: TidyMePage(),
+        body: Test(),
       ),
     );
   }
