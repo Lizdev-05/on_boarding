@@ -13,7 +13,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Container(
           child: Column(
             children: [
@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: Container(
                     height: 50,
                     width: 50,
-                    color: Color.fromARGB(255, 57, 166, 255),
+                    color: const Color.fromARGB(255, 57, 166, 255),
                     child: const Icon(
                       Icons.notifications,
                       color: Colors.white,
@@ -59,10 +59,81 @@ class _LoginPageState extends State<LoginPage> {
                       color: Color.fromARGB(255, 80, 153, 212),
                     ),
                     borderRadius: BorderRadius.all(
-                      Radius.circular(12),
+                      Radius.circular(8),
                     ),
                   ),
                 ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "How do you feel?",
+                    style: GoogleFonts.roboto(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  const Icon(
+                    Icons.more_horiz_outlined,
+                    color: Colors.white,
+                    size: 30,
+                    weight: 800,
+                  )
+                ],
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Container(
+                      padding: EdgeInsets.all(14),
+                      height: 60,
+                      width: 60,
+                      color: const Color.fromARGB(255, 57, 166, 255),
+                      child: Image.asset(
+                        "images/badly.png",
+                      ),
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: Container(
+                      padding: EdgeInsets.all(14),
+                      height: 60,
+                      width: 60,
+                      color: const Color.fromARGB(255, 57, 166, 255),
+                      child: Image.asset("images/fine.png"),
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: Container(
+                      padding: EdgeInsets.all(3),
+                      height: 60,
+                      width: 60,
+                      color: const Color.fromARGB(255, 57, 166, 255),
+                      child: Image.asset("images/well.png"),
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: Container(
+                      padding: EdgeInsets.all(8),
+                      height: 60,
+                      width: 60,
+                      color: const Color.fromARGB(255, 57, 166, 255),
+                      child: Image.asset("images/excellent.png"),
+                    ),
+                  ),
+                ],
               )
             ],
           ),
