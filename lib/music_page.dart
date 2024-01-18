@@ -104,62 +104,47 @@ class _MusicPageState extends State<MusicPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      appBar: AppBar(
-        leadingWidth: 150,
-        backgroundColor: Colors.black,
-        leading: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16),
-          child: Text(
-            "Tracks",
-            style: TextStyle(
-                color: Colors.white, fontSize: 30, fontWeight: FontWeight.w500),
-          ),
-        ),
-      ),
-      body: Container(
-        padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 8),
-        child: ListView.separated(
-            itemBuilder: (BuildContext context, index) {
-              Map<String, dynamic> item = musicItems[index];
-              return Container(
-                // height: 50,
-                // color: Colors.amber,
-                child: ListTile(
-                  leading: ClipRRect(
-                    borderRadius: BorderRadiusDirectional.circular(
-                        item["is_audio"] ? 16 : 30),
-                    child: Container(
-                      height: 60,
-                      width: 60,
-                      child: Image.network(
-                        item["profile"],
-                        fit: BoxFit.cover,
-                      ),
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 8),
+      child: ListView.separated(
+          itemBuilder: (BuildContext context, index) {
+            Map<String, dynamic> item = musicItems[index];
+            return Container(
+              // height: 50,
+              // color: Colors.amber,
+              child: ListTile(
+                leading: ClipRRect(
+                  borderRadius: BorderRadiusDirectional.circular(
+                      item["is_audio"] ? 16 : 30),
+                  child: Container(
+                    height: 60,
+                    width: 60,
+                    child: Image.network(
+                      item["profile"],
+                      fit: BoxFit.cover,
                     ),
                   ),
-                  title: Text(
-                    item["name"],
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
-                  subtitle: Text(
-                    item["title"],
-                    style: TextStyle(
-                        color: Colors.white.withAlpha(100), fontSize: 16),
-                  ),
-                  trailing: Icon(Icons.more_horiz),
                 ),
-              );
-            },
-            separatorBuilder: (BuildContext context, index) {
-              return const SizedBox(
-                height: 10,
-                // color: Colors.transparent,
-              );
-            },
-            itemCount: musicItems.length),
-      ),
+                title: Text(
+                  item["name"],
+                  style: TextStyle(color: Colors.white, fontSize: 18),
+                ),
+                subtitle: Text(
+                  item["title"],
+                  style: TextStyle(
+                      color: Colors.white.withAlpha(100), fontSize: 16),
+                ),
+                trailing: Icon(Icons.more_horiz),
+              ),
+            );
+          },
+          separatorBuilder: (BuildContext context, index) {
+            return const SizedBox(
+              height: 10,
+              // color: Colors.transparent,
+            );
+          },
+          itemCount: musicItems.length),
     );
   }
 }
