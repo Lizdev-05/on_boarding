@@ -38,13 +38,13 @@ class _TestState extends State<TidyMePage> {
             ),
             trailing: TextButton.icon(
               onPressed: () {},
+              label: const Text("View All",
+                  style: TextStyle(color: Colors.white, fontSize: 20)),
               icon: const Icon(
                 Icons.arrow_forward,
                 color: Colors.white,
                 size: 28,
               ), // Place the icon first
-              label: const Text("View All",
-                  style: TextStyle(color: Colors.white, fontSize: 20)),
             ),
           ),
           SizedBox(
@@ -123,7 +123,7 @@ class _TestState extends State<TidyMePage> {
           ),
           Expanded(
             child: TidyListData(),
-          )
+          ),
         ],
       ),
     );
