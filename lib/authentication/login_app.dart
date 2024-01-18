@@ -6,11 +6,19 @@ class LoginApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 8, 120, 212),
-        body: LoginPage(),
+        backgroundColor: const Color.fromARGB(255, 8, 120, 212),
+        bottomNavigationBar: BottomNavigationBar(
+          // Use BottomNavigationBar here
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          ],
+        ),
+        body: const SafeArea(child: LoginPage()),
       ),
     );
   }
