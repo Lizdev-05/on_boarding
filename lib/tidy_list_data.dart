@@ -75,7 +75,7 @@ class TidyListData extends StatelessWidget {
           child: Card(
             color: item.color ?? Colors.white,
             child: Padding(
-              padding: const EdgeInsets.all(8),
+              padding: const EdgeInsets.all(4),
               child: Column(
                 children: [
                   Row(
@@ -87,7 +87,7 @@ class TidyListData extends StatelessWidget {
                             fontSize: 20,
                             fontWeight: FontWeight.w600),
                       ),
-                      const SizedBox(width: 70),
+                      const SizedBox(width: 50),
                       Text(
                         item.subtitle,
                         style: const TextStyle(

@@ -6,7 +6,7 @@ class AuthenticationApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Color.fromARGB(255, 33, 109, 171),
@@ -18,7 +18,7 @@ class AuthenticationApp extends StatelessWidget {
         //     BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
         //   ],
         // ),
-        body: const SafeArea(child: LoginPage()),
+        body: SafeArea(child: LoginPage()),
       ),
     );
 
